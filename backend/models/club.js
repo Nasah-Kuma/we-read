@@ -22,7 +22,7 @@ const clubSchema = new mongoose.Schema(
     },
     isPrivate: {
       type: Boolean,
-      required: [true, "Please specify if this club is private"],
+      //required: [true, "Please specify if this club is private"],
       default: false,
     },
   },

@@ -6,4 +6,6 @@ function generateToken(userId) {
   });
 }
 
+function verifyToken() {}
+
 export { generateToken };
