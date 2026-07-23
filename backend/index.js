@@ -1,6 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./connection.js";
+import authRouter  from "./routes/authRouter.js";
+
 
 dotenv.config();
 
@@ -13,3 +15,5 @@ connectDB().then(() => {
     console.log(`Server running on ${process.env.PORT || 3000}`);
   });
 });
+
+app.use('/auth', authRouter);

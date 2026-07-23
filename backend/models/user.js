@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema(
   {
     name: {
         type: String,
-        required: [true, "User name is require."],
+        required: [true, "Name is required."],
         trim: true
     },
     email: {
@@ -14,7 +14,7 @@ const userSchema = new mongoose.Schema(
     },
     password: {
         type: String,
-        required: [true, "User name is require."],
+        required: [true, "Password is required."],
         select: false
     },
     bio: {
@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema(
     },
     role: {
         type: String,
-        required: [true, "Role is require."],
+        //required: [true, "Role is required."],
         enum: []
     },
   },
@@ -31,3 +31,7 @@ const userSchema = new mongoose.Schema(
     timestamps: true,
   },
 );
+
+const User = mongoose.model('User', userSchema);
+
+export default User;
