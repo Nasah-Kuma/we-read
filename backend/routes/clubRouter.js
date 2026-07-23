@@ -1,9 +1,10 @@
 import express from "express";
 import * as clubController from "../controllers/clubController.js";
+import { requireAuth } from "../middleware/auth.js";
 
 const router = express.Router();
 
-router.post('/', clubController.createClub);
+router.post('/', requireAuth, clubController.createClub);
 
 router.get('/', clubController.getClubs);
 

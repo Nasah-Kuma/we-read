@@ -6,6 +6,8 @@ function generateToken(userId) {
   });
 }
 
-function verifyToken() {}
+function verifyToken(token) {
+  return jwt.verify(token, process.env.JWT_SECRET);
+}
 
-export { generateToken };
+export { generateToken, verifyToken };
