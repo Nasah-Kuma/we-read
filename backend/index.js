@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./connection.js";
 import authRouter  from "./routes/authRouter.js";
+import clubRouter from "./routes/clubRouter.js";
 
 
 dotenv.config();
@@ -17,3 +18,5 @@ connectDB().then(() => {
 });
 
 app.use('/auth', authRouter);
+
+app.use('/club', clubRouter);
